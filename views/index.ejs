@@ -4,16 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            height: 60%;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .card form {
+            margin-top: 20px;
+        }
+
+        .card form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Qureshi Brothers</h1>
-    <h3>T-shirts</h3>
 
-    <p>Price: $10.00</p>
-    <p>Quantity: 1</p>
+    <div class="card-container">
+        <div class="card">
+            <img src="./images/images (1).jfif">
+            <h3>T-shirt 1</h3>
+            <p>Price: $10.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 1">
+                <input type="hidden" name="price" value="1000">
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
 
-    <form action="/checkout" method="post">
-        <input type="submit" value="Proceed To Checkout">
-    </form>
+        <div class="card">
+            <img src="./images/images (2).jfif" alt="T-shirt 2">
+            <h3>T-shirt 2</h3>
+            <p>Price: $12.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 2">
+                <input type="hidden" name="price" value="1200">
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
+
+
+        <div class="card">
+            <img src="./images/images (3).jfif" alt="T-shirt 3">
+            <h3>T-shirt 3</h3>
+            <p>Price: $15.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 3">
+                <input type="hidden" name="price" value="1500">
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
+
+        <div class="card">
+            <img src="./images/images (4).jfif" alt="T-shirt 4">
+            <h3>T-shirt 4</h3>
+            <p>Price: $18.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 4">
+                <input type="hidden" name="price" value="1800"> 
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
+
+        <div class="card">
+            <img src="./images/images.jfif" alt="T-shirt 5">
+            <h3>T-shirt 5</h3>
+            <p>Price: $20.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 5">
+                <input type="hidden" name="price" value="2000"> 
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="./images/06499379_175923_3.webp" alt="T-shirt 6">
+            <h3>T-shirt 6</h3>
+            <p>Price: $22.00</p>
+            <p>Quantity: 1</p>
+            <form action="/checkout" method="post">
+                <input type="hidden" name="productName" value="T-shirt 2">
+                <input type="hidden" name="price" value="1200"> 
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" value="Proceed To Checkout">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
